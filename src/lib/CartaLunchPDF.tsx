@@ -184,20 +184,16 @@ export const CartaLunchPDF = ({ categories, lang, session = 'lunch', ReactPdf }:
       letterSpacing: 2,
       color: '#1a1a1a'
     },
-    premiumLogoBox: {
-      borderWidth: 3,
-      borderColor: goldColor,
-      padding: 2,
-      backgroundColor: '#FDFDF9',
-      marginTop: -12, // Moved down from -20 for better integration
-      marginBottom: 10,
-    },
-    premiumLogoInnerBox: {
-      borderWidth: 0.5,
-      borderColor: goldColor,
-      padding: 6,
+    premiumLogoContainer: {
       alignItems: 'center',
-      justifyContent: 'center',
+      zIndex: 10,
+      marginTop: -30,
+      marginBottom: 15,
+    },
+    logo: {
+      width: 90,
+      height: 90,
+      objectFit: 'contain',
     },
     premiumSectionRow: {
       flexDirection: 'row',
@@ -397,13 +393,9 @@ export const CartaLunchPDF = ({ categories, lang, session = 'lunch', ReactPdf }:
       <Page size="A4" style={styles.page}>
         <View style={styles.premiumBorder} fixed />
 
-        {/* LOGO INTEGRADO EN EL BORDE */}
-        <View style={{ alignItems: 'center', zIndex: 10 }} fixed>
-          <View style={styles.premiumLogoBox}>
-            <View style={styles.premiumLogoInnerBox}>
-              {logoBuffer && <Image src={logoBuffer} style={{ width: 80, height: 48 }} />}
-            </View>
-          </View>
+        {/* LOGO SIN BORDES TIPO MEDALLÓN */}
+        <View style={styles.premiumLogoContainer} fixed>
+          {logoBuffer && <Image src={logoBuffer} style={styles.logo} />}
         </View>
 
         <View style={{ alignItems: 'center', marginBottom: 25, marginTop: 15 }}>

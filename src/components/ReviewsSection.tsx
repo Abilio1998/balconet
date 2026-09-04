@@ -6,7 +6,7 @@
 //       It will look like: https://g.page/r/XXXXXXXXXXXXXXXX/review
 // ─────────────────────────────────────────────────────────────────────────────
 const GOOGLE_WRITE_REVIEW_URL =
-  'https://www.google.es/maps/place/El+Balconet+Bar-Restaurant/@41.5269302,2.363678,17z/data=!4m8!3m7!1s0x12a4b68dff9d5f69:0xbc9dc2254c33b8bc!8m2!3d41.5269302!4d2.3662529!9m1!1b1!16s%2Fg%2F1tt5p31v?entry=ttu'
+  'https://www.google.es/maps/place/El+Nou+Balconet+de+Premia+de+Dalt/@41.5045512,2.345625,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4b793ac442081:0xc6e94b35d91a3f60!8m2!3d41.5045472!4d2.3481999!16s%2Fg%2F11yl5zlw8r?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D'
 
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'

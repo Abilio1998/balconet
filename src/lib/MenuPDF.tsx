@@ -186,8 +186,8 @@ export const MenuPDF = ({ menu, lang, logoData, ReactPdf }: MenuPDFProps) => {
 
   const styles = StyleSheet.create({
     page: {
-      paddingTop: 190,
-      paddingBottom: 52,
+      paddingTop: 140,
+      paddingBottom: 50,
       paddingLeft: 45,
       paddingRight: 45,
       fontFamily: 'Georgia',
@@ -197,22 +197,15 @@ export const MenuPDF = ({ menu, lang, logoData, ReactPdf }: MenuPDFProps) => {
     },
     logoContainer: {
       position: 'absolute',
-      top: 2,
+      top: 30,
       left: 0,
       right: 0,
       alignItems: 'center'
     },
-    logoBox: {
-      padding: 10,
-      backgroundColor: '#FFFFFF',
-      position: 'relative',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minWidth: 120
-    },
     logo: {
       width: 90,
-      height: 56,
+      height: 90,
+      objectFit: 'contain',
     },
     header: {
       alignItems: 'center',
@@ -338,14 +331,9 @@ export const MenuPDF = ({ menu, lang, logoData, ReactPdf }: MenuPDFProps) => {
     <Document>
       <Page size="A4" style={styles.page}>
         
-        {activeBgBuffer && (
-          <View fixed style={{ position: 'absolute', top: 15, left: 15, right: 15, bottom: 15, zIndex: -2 }}>
-            <Image 
-              src={activeBgBuffer} 
-              style={{ width: '100%', height: '100%' }} 
-            />
-          </View>
-        )}
+        <View style={styles.logoContainer} fixed>
+          {finalLogo && <Image src={finalLogo} style={styles.logo} />}
+        </View>
 
         <View style={[styles.header, { marginBottom: courseMarginBottom / 2 }]}>
           {isWeekend ? null : (

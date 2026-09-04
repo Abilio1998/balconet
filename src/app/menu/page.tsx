@@ -136,25 +136,25 @@ export default function MenuPage() {
 
 
   return (
-    <main className="min-h-screen bg-black flex flex-col pt-20 md:pt-24">
+    <main className="min-h-screen bg-[#FAFAFA] flex flex-col pt-20 md:pt-24">
       <FeaturedDishModal />
       <Navbar />
       
       <div className="flex-grow container mx-auto px-4 py-6 md:py-12">
         <header className="text-center mb-4 md:mb-12 px-2">
           <h1 className="font-serif text-2xl md:text-4xl mb-2 md:mb-4 text-[#D4AF37] tracking-tight">{t('nav.gastronomy')}</h1>
-          <p className="text-white/40 text-[10px] md:text-sm max-w-lg mx-auto leading-relaxed md:block hidden">
+          <p className="text-black/50 text-[10px] md:text-sm max-w-lg mx-auto leading-relaxed md:block hidden font-bold">
             {t('carta.subtitle')}
           </p>
         </header>
 
         {/* Premium Tab Selector */}
         <div id="menu-tab-selector" className="flex justify-center mb-4 md:mb-8 px-2">
-          <div className="inline-flex p-1 bg-white/[0.03] backdrop-blur-md rounded-full border border-white/10 shadow-2xl relative">
+          <div className="inline-flex p-1 bg-black/[0.03] backdrop-blur-md rounded-full border border-black/5 shadow-sm relative">
             <button
               onClick={() => setActiveTab('menu')}
               className={`relative z-10 flex items-center gap-2 px-8 py-3 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold transition-all duration-500 ${
-                activeTab === 'menu' ? 'text-black' : 'text-white/40 hover:text-white'
+                activeTab === 'menu' ? 'text-black' : 'text-black/40 hover:text-black'
               }`}
             >
               <UtensilsCrossed size={14} className={activeTab === 'menu' ? 'text-black' : 'text-[#D4AF37]'} />
@@ -163,7 +163,7 @@ export default function MenuPage() {
             <button
               onClick={() => setActiveTab('carta')}
               className={`relative z-10 flex items-center gap-2 px-8 py-3 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold transition-all duration-500 ${
-                activeTab === 'carta' ? 'text-black' : 'text-white/40 hover:text-white'
+                activeTab === 'carta' ? 'text-black' : 'text-black/40 hover:text-black'
               }`}
             >
               <BookOpen size={14} className={activeTab === 'carta' ? 'text-black' : 'text-[#D4AF37]'} />
@@ -202,14 +202,14 @@ export default function MenuPage() {
                   >
                     <div className={`w-9 h-9 md:w-12 md:h-12 rounded-full flex items-center justify-center border transition-all duration-500 ${
                       isActive 
-                        ? 'bg-red-500/20 border-red-500 shadow-[0_0_15px_rgba(239,68,68,0.3)]' 
-                        : 'bg-white/5 border-white/10 group-hover:border-white/30'
+                        ? 'bg-red-500/10 border-red-500 shadow-[0_0_15px_rgba(239,68,68,0.2)]' 
+                        : 'bg-black/5 border-black/10 group-hover:border-black/30'
                     }`}>
                       <span className={`text-base md:text-xl transition-all duration-500 ${isActive ? 'grayscale-0 scale-110' : 'grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0'}`}>
                         {all.icon}
                       </span>
                     </div>
-                    <span className={`text-[8px] md:text-[9px] uppercase tracking-tighter font-bold transition-colors hidden md:block ${isActive ? 'text-red-500' : 'text-white/20 group-hover:text-white/60'}`}>
+                    <span className={`text-[8px] md:text-[9px] uppercase tracking-tighter font-bold transition-colors hidden md:block ${isActive ? 'text-red-500' : 'text-black/30 group-hover:text-black/70'}`}>
                       {t(`allergens.${all.id}`)}
                     </span>
                   </button>
@@ -220,10 +220,10 @@ export default function MenuPage() {
                 onClick={() => setShowAllAllergens(!showAllAllergens)}
                 className="group flex flex-col items-center gap-2 transition-all"
               >
-                <div className="w-12 h-12 rounded-full flex items-center justify-center border border-dashed border-white/20 bg-white/5 group-hover:border-white/40 group-hover:bg-white/10 transition-all">
-                  {showAllAllergens ? <ChevronUp size={16} className="text-white/40" /> : <ChevronDown size={16} className="text-white/40" />}
+                <div className="w-12 h-12 rounded-full flex items-center justify-center border border-dashed border-black/20 bg-black/5 group-hover:border-black/40 group-hover:bg-black/10 transition-all">
+                  {showAllAllergens ? <ChevronUp size={16} className="text-black/40" /> : <ChevronDown size={16} className="text-black/40" />}
                 </div>
-                <span className="text-[9px] uppercase tracking-tighter font-bold text-white/20 group-hover:text-white/60">
+                <span className="text-[9px] uppercase tracking-tighter font-bold text-black/30 group-hover:text-black/70">
                   {showAllAllergens ? t('common.show_less') : t('common.filters') || 'Filtros'}
                 </span>
               </button>

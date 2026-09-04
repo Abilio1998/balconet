@@ -1,0 +1,223 @@
+{
+  "nav": {
+    "home": "Inici",
+    "about": "Nosaltres",
+    "menu": "Menú",
+    "carta": "Carta",
+    "gastronomy": "Gastronomia",
+    "contact": "Contacte",
+    "reserve": "Reservar"
+  },
+  "hero": {
+    "subtitle": "Restaurant · Terrassa · Celebracions · Premià de Dalt",
+    "cta_menu": "Veure Menú del Dia",
+    "cta_carta": "Veure la Nostra Carta",
+    "cta_reserve": "Reservar Taula",
+    "cta_contact": "Contacte"
+  },
+  "about": {
+    "title": "La Nostra Història",
+    "description": "El Balconet de Premià de Dalt és un restaurant de cuina mediterrània amb una proposta basada en producte local, cuina honesta i plats pensats per gaudir i compartir. Un espai envoltat de natura, amb zones exteriors i vistes al mar, que transmet una sensació tranquil·la i familiar.",
+    "values": {
+      "quality": "Qualitat",
+      "quality_desc": "Ingredients frescos i locals seleccionats cada dia.",
+      "tradition": "Tradició",
+      "tradition_desc": "Receptes tradicionals amb un toc modern i creatiu.",
+      "hospitality": "Hospitalitat",
+      "hospitality_desc": "Un servei càlid i acollidor en un ambient familiar."
+    }
+  },
+  "menu": {
+    "title": "El Menú del Dia",
+    "subtitle": "Elaborat amb productes frescos del Maresme i de temporada",
+    "first_course": "Primers Plats",
+    "second_course": "Segons Plats",
+    "dessert": "Postres",
+    "price": "Preu",
+    "includes": "Inclou pa, beguda i cafè",
+    "includes_weekend": "Inclou pa i cafè (Beguda a part)",
+    "no_menu": "El menú d'avui encara no està disponible. Torneu més tard.",
+    "hours_weekdays": "Dl a Dv: 13:00h - 16:00h",
+    "hours_weekends": "Ds, Dg i Festius: 13:00h - 16:30h",
+    "reserve": "Reservar Taula",
+    "call_us": "Truca'ns",
+    "tomorrow_not_published": "El menú de demà encara no està publicat.",
+    "tomorrow_preparing": "Els nostres xefs l'estan preparant. Torna més tard.",
+    "preparing_today": "Estem elaborant noves propostes per a tu.",
+    "back_to_today": "Tornar a Avui",
+    "view_tomorrow": "Veure Demà"
+  },
+  "carta": {
+    "title": "La Nostra Carta",
+    "subtitle": "Una selecció acurada de plats mediterranis",
+    "zoom_hint": "Feu clic per ampliar",
+    "swipe_hint": "Llisqueu per veure més",
+    "view_full": "Veure carta completa"
+  },
+  "contact": {
+    "title": "Trobeu-nos",
+    "subtitle": "Som aquí per rebre't",
+    "address": "Adreça",
+    "phone": "Telèfon",
+    "hours": "Horari",
+    "hours_value": "Dilluns – Diumenge: 08:00 – 24:00",
+    "services": "Serveis",
+    "services_list": "Terrassa · Bons Còctels · Wi-Fi",
+    "service_parking": "Pàrquing",
+    "service_park": "Parc Infantil",
+    "get_directions": "Com arribar"
+  },
+  "footer": {
+    "rights": "Tots els drets reservats.",
+    "made_with": "Desenvolupat per"
+  },
+  "featured": {
+    "chef_suggestion": "Suggeriment del Xef",
+    "our_star": "Top Setmanal",
+    "dish_of_month": "Plat del Mes",
+    "recommendations": "Recomanacions",
+    "reserve_table": "Reservar Taula",
+    "iva_included": "(Iva incl.)",
+    "default_description": "Descobreix el sabor únic que ha conquerit els nostres comensals aquest mes. Una creació artesanal amb els millors ingredients de proximitat.",
+    "quote": "Una d'aquestes creacions que defineixen l'essència d'El Balconet. Imprescindible en cada visita.",
+    "ask_waiter": "Demana-ho al teu cambrer!",
+    "ask_waiter_sub": "Ho tenim disponible a la nostra carta",
+    "close_modal": "Veure el menú complet",
+    "interior": "Interior",
+    "exterior": "Exterior",
+    "promo_reserve_title": "Reserva online",
+    "promo_reserve_desc": "Assegura la teva taula des de casa còmodament",
+    "promo_social_title": "El costat més saborós d'El Balconet",
+    "promo_social_desc": "Plats fora de carta, esdeveniments especials i el dia a dia dels nostres fogons. T'esperem a Instagram!"
+  },
+  "reviews": {
+    "badge": "Testimonis",
+    "title": "El que diuen els nostres clients",
+    "desc": "Descobreix les experiències d'aquells que ja han gaudit de la nostra cuina mediterrània.",
+    "leave_review": "Deixar una ressenya a Google",
+    "cta_enjoyed": "T'ha agradat la visita?",
+    "cta_title": "Explica'ns què en",
+    "cta_title_highlight": "vas pensar",
+    "cta_desc": "La teva opinió a Google ajuda que més persones descobreixin El Balconet i ens motiva a millorar cada dia.",
+    "cta_write": "Escriure una ressenya",
+    "cta_tap_star": "Toca una estrella per valorar",
+    "cta_verified": "Verificat per Google Business",
+    "float_enjoyed": "T'ha agradat la visita?",
+    "float_desc": "La teva opinió ens ajuda a millorar i a arribar a més gent.",
+    "float_write": "Escriure ressenya",
+    "float_label": "Valorar a Google"
+  },
+  "admin": {
+    "login": "Iniciar Sessió",
+    "logout": "Tancar Sessió",
+    "dashboard": "Tauler de Control",
+    "hero_images": "Imatges Hero",
+    "carta_images": "Imatges Carta",
+    "daily_menu": "Menú del Dia",
+    "translations": "Traduccions",
+    "upload": "Pujar Imatge",
+    "save": "Desar",
+    "cancel": "Cancel·lar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "add_dish": "Afegir Plat",
+    "dish_name": "Nom del plat",
+    "dish_description": "Descripció",
+    "menu_price": "Preu del Menú",
+    "menu_date": "Data del Menú",
+    "publish": "Publicar",
+    "unpublish": "Despublicar",
+    "email": "Correu electrònic",
+    "password": "Contrasenya",
+    "login_title": "Administració",
+    "login_subtitle": "Accediu al tauler de control",
+    "wrong_credentials": "Credencials incorrectes",
+    "select_language": "Seleccionar idioma a editar"
+  },
+  "allergens": {
+    "filter_title": "Filtrar per restricció dietètica:",
+    "filter_active": "* Mostrant només plats aptes per a la teva selecció.",
+    "notice": "Al·lèrgies o intolerançes? Consulta amb el nostre personal.",
+    "gluten": "Sense Gluten",
+    "dairy": "Sense Lactosa",
+    "eggs": "Sense Ou",
+    "nuts": "Sense Fruits Secs",
+    "fish": "Sense Peix",
+    "crustaceans": "Sense Crustacis",
+    "peanuts": "Sense Cacauets",
+    "soybeans": "Sense Soia",
+    "celery": "Sense Api",
+    "mustard": "Sense Mostassa",
+    "sesame": "Sense Sèsam",
+    "sulphites": "Sense Sulfits",
+    "lupin": "Sense Tramussos",
+    "molluscs": "Sense Mol·luscs"
+  },
+  "gastronomy": {
+    "daily_menu": "Menú del Dia",
+    "full_menu": "Carta Completa"
+  },
+  "common": {
+    "clear": "Netejar",
+    "show_less": "Veure menys",
+    "allergens": "Al·lèrgens",
+    "featured": "Recomanat",
+    "filters": "Filtres"
+  },
+  "sessions": {
+    "closed": "Cuina Tancada",
+    "next": "Properament",
+    "active": "Servei actiu ara",
+    "next_turn": "Proper Torn",
+    "breakfast": "Esmorzars",
+    "lunch": "Migdia",
+    "dinner": "Sopars",
+    "view_breakfast": "Veure Esmorzars",
+    "view_lunch": "Veure Migdia",
+    "view_dinner": "Veure Sopars",
+    "back_to_real": "Tornar al Real",
+    "preview_mode": "Mode Vista Prèvia",
+    "viewing_selection": "Mostrant selecció de",
+    "closing_in": "Tancament de cuina en",
+    "closing_breakfast": "Tancament esmorzars en",
+    "closing_lunch": "Tancament dinars en",
+    "closing_dinner": "Tancament sopars en",
+    "status_breakfast": "Horari d'Esmorzars",
+    "status_lunch": "Horari de Dinars",
+    "status_dinner": "Horari de Sopars",
+    "view_next_session": "Veient Propera Sessió",
+    "tomorrow_breakfast": "Demà (Esmorzars)",
+    "viewing_tomorrow": "Veient Menú de Demà",
+    "opening_tomorrow": "Obrim demà a les 13:00h",
+    "available_in": "Disponible en",
+    "tomorrow": "Demà",
+    "opening_in": "Obertura"
+  },
+  "promo": {
+    "suggestion": "Suggeriment",
+    "dinner_title": "Vens a sopar?",
+    "dinner_desc": "La nostra carta de nit és la nostra proposta més ambiciosa, amb plats exclusius i suggeriments del xef.",
+    "dinner_cta": "Descobrir el sopar",
+    "full_experience": "Busques una experiència completa?",
+    "full_experience_desc": "La nostra carta de nit ofereix una selecció molt més àmplia de carns a la brasa, peixos frescos i suggeriments exclusius del xef.",
+    "view_dinner_menu": "Veure carta de nit"
+  },
+  "visual": {
+    "story": "Visual Story",
+    "our_kitchen": "La Nostra Cuina"
+  },
+  "product": {
+    "terrace": "Terrassa",
+    "like": "M'agrada",
+    "liked": "T'agrada"
+  },
+  "reservations": {
+    "title": "Reserva la teva taula",
+    "subtitle": "Sopars inoblidables en el millor ambient",
+    "web_disabled_title": "Atenció Telefònica",
+    "web_disabled_message": "Actualment no acceptem reserves automàtiques per la web. Si us plau, truca'ns directament per gestionar la teva reserva de forma personalitzada.",
+    "call_now": "Trucar ara"
+  }
+}
+
+

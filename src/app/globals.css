@@ -1,0 +1,274 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold: #D4AF37;
+    --gold-light: #E8C84A;
+    --gold-dark: #B8960C;
+    --charcoal: #111111;
+    --charcoal-light: #1A1A1A;
+  }
+
+  html,
+  body {
+    @apply max-w-full bg-[#FAFAFA] text-[#111111] antialiased font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+
+  ::selection {
+    background-color: var(--gold);
+    color: black;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #FAFAFA;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 9999px;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 font-bold tracking-widest uppercase text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white rounded-sm;
+    background-color: var(--gold);
+    color: black;
+  }
+
+  .btn-gold:hover {
+    background-color: var(--gold-light);
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+  }
+
+  .btn-gold:focus {
+    box-shadow: 0 0 0 2px var(--gold);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 font-bold tracking-widest uppercase text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white rounded-sm;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    background: transparent;
+  }
+
+  .btn-outline:hover {
+    background-color: var(--gold);
+    color: black;
+    transform: scale(1.05);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 border border-black/30 text-[#111111] font-bold tracking-widest uppercase text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black/50 focus:ring-offset-2 focus:ring-offset-white rounded-sm;
+  }
+
+  .btn-ghost:hover {
+    border-color: black;
+    transform: scale(1.05);
+  }
+
+  .btn-premium {
+    @apply relative overflow-hidden transition-all duration-500 rounded-sm;
+  }
+
+  .btn-premium:hover {
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.6);
+    transform: scale(1.02);
+  }
+
+  .btn-premium:active {
+    transform: scale(0.98);
+  }
+
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl text-[#111111] text-center;
+  }
+
+  .gold-divider {
+    @apply w-24 h-[1px] mx-auto my-6;
+    background-color: var(--gold);
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-black/5 rounded-sm shadow-sm;
+  }
+
+  .gold-text {
+    color: var(--gold);
+  }
+
+  .nav-link {
+    @apply text-[#111111]/80 transition-colors duration-300 text-sm tracking-widest uppercase font-medium;
+  }
+
+  .nav-link:hover {
+    color: var(--gold);
+  }
+
+  .input-field {
+    @apply w-full text-black placeholder-black/40 px-4 py-3 focus:outline-none transition-colors duration-300 rounded-sm;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .input-field:focus {
+    border-color: var(--gold);
+  }
+
+  .admin-input {
+    @apply w-full text-black placeholder-black/40 px-4 py-3 rounded-sm focus:outline-none transition-colors duration-300 text-sm;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .admin-input:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 1px var(--gold);
+  }
+
+  .admin-input-small {
+    @apply w-full text-black placeholder-black/40 px-3 py-2 rounded-sm focus:outline-none transition-colors duration-300 text-sm;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .admin-input-small:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 1px var(--gold);
+  }
+
+  /* Opciones de los <select> en paneles admin — negro sobre blanco para máxima legibilidad */
+  .admin-input-small option,
+  .admin-input option {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, #D4AF37 0%, #E8C84A 50%, #B8960C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    opacity: 1 !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--gold) !important;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: var(--gold) !important;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.3);
+    border-radius: 9999px;
+  }
+}
+
+/* Print Optimization */
+@media print {
+  @page {
+    margin: 2cm;
+    size: auto;
+  }
+
+  /* Hide non-essential elements */
+  nav, footer, button, .fixed, .no-print, header {
+    display: none !important;
+  }
+
+  /* Reset layout for printing */
+  html, body {
+    background: white !important;
+    color: black !important;
+    width: 100%;
+    height: auto;
+    overflow: visible !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+    background: white !important;
+  }
+
+  /* Ensure text is dark and legible */
+  .text-white, .text-white\/40, .text-white\/60 {
+    color: #000 !important;
+  }
+
+  .text-\[\#D4AF37\], .gold-text {
+    color: #B8860B !important; /* Darker gold for better contrast on white paper */
+  }
+
+  /* Category and Product break control */
+  .break-inside-avoid, 
+  .group.flex.flex-col, 
+  .category-section {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    display: block !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Force single column for print */
+  .columns-1, .columns-2, .lg\:columns-2 {
+    columns: 1 !important;
+    display: block !important;
+  }
+
+  /* Images handling */
+  img {
+    max-width: 150px !important;
+    height: auto !important;
+    border-radius: 4px;
+    filter: grayscale(0%) !important;
+  }
+
+  /* Ensure gold borders are visible */
+  .border-\[\#D4AF37\], .border-white\/5, .border-white\/10 {
+    border-color: #B8860B !important;
+  }
+
+  /* Add page break before categories if they are major sections */
+  h3.font-serif {
+    page-break-after: avoid;
+    margin-top: 2.5rem !important;
+  }
+}

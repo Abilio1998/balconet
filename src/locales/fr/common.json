@@ -1,0 +1,222 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "menu": "Menu",
+    "carta": "Carte",
+    "gastronomy": "Gastronomie",
+    "contact": "Contact",
+    "reserve": "Réserver"
+  },
+  "hero": {
+    "subtitle": "Restaurant · Terrasse · Célébrations · Premià de Dalt",
+    "cta_menu": "Voir le Menu du Jour",
+    "cta_carta": "Voir notre Carte",
+    "cta_reserve": "Réserver une Table",
+    "cta_contact": "Contact"
+  },
+  "about": {
+    "title": "Notre Histoire",
+    "description": "El Balconet à Premià de Dalt est un restaurant de cuisine méditerranéenne avec une proposition basée sur les produits locaux, une cuisine honnête et des plats conçus pour être appréciés et partagés. Un espace entouré de nature, avec des espaces extérieurs et des vues sur la mer.",
+    "values": {
+      "quality": "Qualité",
+      "quality_desc": "Ingrédients frais et locaux sélectionnés chaque jour.",
+      "tradition": "Tradition",
+      "tradition_desc": "Recettes traditionnelles avec une touche moderne et créative.",
+      "hospitality": "Hospitalité",
+      "hospitality_desc": "Un service chaleureux et accueillant dans une ambiance familiale."
+    }
+  },
+  "menu": {
+    "title": "Le Menu du Jour",
+    "subtitle": "Élaboré avec des produits frais du Maresme et de saison",
+    "first_course": "Entrées",
+    "second_course": "Plats Principaux",
+    "dessert": "Desserts",
+    "price": "Prix",
+    "includes": "Pain, boisson et café inclus",
+    "no_menu": "Le menu d'aujourd'hui n'est pas encore disponible. Revenez plus tard.",
+    "hours_weekdays": "Lun - Ven: 13h00 - 16h00",
+    "hours_weekends": "Week-end et Jours Fériés: 13h00 - 16h30",
+    "reserve": "Réserver une Table",
+    "call_us": "Appelez-nous",
+    "tomorrow_not_published": "Le menu de demain n'est pas encore publié.",
+    "tomorrow_preparing": "Nos chefs le préparent. Revenez plus tard.",
+    "preparing_today": "Nous préparons de nouvelles propositions pour vous.",
+    "back_to_today": "Retour à Aujourd'hui",
+    "view_tomorrow": "Voir Demain"
+  },
+  "carta": {
+    "title": "Notre Carte",
+    "subtitle": "Une sélection soignée de plats méditerranéens",
+    "zoom_hint": "Cliquez pour agrandir",
+    "swipe_hint": "Faites glisser pour voir plus",
+    "view_full": "Voir la carte complète"
+  },
+  "contact": {
+    "title": "Nous Trouver",
+    "subtitle": "Nous sommes là pour vous accueillir",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "hours": "Horaires",
+    "hours_value": "Lundi – Dimanche: 08:00 – 24:00",
+    "services": "Services",
+    "services_list": "Terrasse · Bons Cocktails · Wi-Fi",
+    "service_parking": "Parking",
+    "service_park": "Aire de Jeux",
+    "get_directions": "Itinéraire"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "made_with": "Développé par"
+  },
+  "featured": {
+    "chef_suggestion": "Suggestion du Chef",
+    "our_star": "Top Semaine",
+    "dish_of_month": "Plat du Mois",
+    "recommendations": "Recommandations",
+    "reserve_table": "Réserver una Table",
+    "iva_included": "(TVA incl.)",
+    "default_description": "Découvrez la saveur unique qui a conquis nos convives ce mois-ci. Una création artisanale avec les meilleurs ingrédients locaux.",
+    "quote": "L'une de ces créations qui définissent l'essence d'El Balconet. Indispensable à chaque visite.",
+    "ask_waiter": "Demandez-le à votre serveur !",
+    "ask_waiter_sub": "Nous l'avons disponible sur notre carte",
+    "close_modal": "Voir le menu complet",
+    "interior": "Intérieur",
+    "exterior": "Extérieur",
+    "promo_reserve_title": "Réserver en ligne",
+    "promo_reserve_desc": "Sécurisez votre table depuis chez vous confortablement",
+    "promo_social_title": "Le côté le plus savoureux d'El Balconet",
+    "promo_social_desc": "Plats hors carte, événements spéciaux et le quotidien de nos cuisines. On se voit sur Instagram !"
+  },
+  "reviews": {
+    "badge": "Témoignages",
+    "title": "Ce que disent nos clients",
+    "desc": "Découvrez les expériences de ceux qui ont déjà goûté à notre cuisine méditerranéenne.",
+    "leave_review": "Laisser un avis sur Google",
+    "cta_enjoyed": "Avez-vous apprécié votre visite ?",
+    "cta_title": "Dites-nous ce que vous en",
+    "cta_title_highlight": "avez pensé",
+    "cta_desc": "Votre avis sur Google aide plus de personnes à découvrir El Balconet et nous motive à nous améliorer chaque jour.",
+    "cta_write": "Écrire un avis",
+    "cta_tap_star": "Touchez une étoile pour noter",
+    "cta_verified": "Vérifié par Google Business",
+    "float_enjoyed": "Avez-vous apprécié votre visite ?",
+    "float_desc": "Votre avis nous aide à nous améliorer et à toucher plus de personnes.",
+    "float_write": "Écrire un avis",
+    "float_label": "Évaluer sur Google"
+  },
+  "admin": {
+    "login": "Se Connecter",
+    "logout": "Se Déconnecter",
+    "dashboard": "Tableau de Bord",
+    "hero_images": "Images Hero",
+    "carta_images": "Images Carte",
+    "daily_menu": "Menu du Jour",
+    "translations": "Traductions",
+    "upload": "Télécharger Image",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "add_dish": "Ajouter un Plat",
+    "dish_name": "Nom du plat",
+    "dish_description": "Description",
+    "menu_price": "Prix du Menu",
+    "menu_date": "Date du Menu",
+    "publish": "Publier",
+    "unpublish": "Dépublier",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "login_title": "Administration",
+    "login_subtitle": "Accéder au tableau de bord",
+    "wrong_credentials": "Identifiants incorrects",
+    "select_language": "Sélectionner la langue à modifier"
+  },
+  "allergens": {
+    "filter_title": "Filtrer par restriction diététique:",
+    "filter_active": "* Affichage uniquement des plats adaptés à votre sélection.",
+    "notice": "Allergies ou intolérances ? Demandez à notre personnel.",
+    "gluten": "Sans Gluten",
+    "dairy": "Sans Lactose",
+    "eggs": "Sans Œuf",
+    "nuts": "Sans Fruits à Coque",
+    "fish": "Sans Poisson",
+    "crustaceans": "Sans Crustacés",
+    "peanuts": "Sans Arachides",
+    "soybeans": "Sans Soja",
+    "celery": "Sans Céleri",
+    "mustard": "Sans Moutarde",
+    "sesame": "Sans Sésame",
+    "sulphites": "Sans Sulfites",
+    "lupin": "Sans Lupin",
+    "molluscs": "Sans Mollusques"
+  },
+  "gastronomy": {
+    "daily_menu": "Menu du Jour",
+    "full_menu": "Carte Complète"
+  },
+  "common": {
+    "clear": "Effacer",
+    "show_less": "Voir moins",
+    "allergens": "Allergènes",
+    "featured": "Recommandé",
+    "filters": "Filtres"
+  },
+  "sessions": {
+    "closed": "Cuisine Fermée",
+    "next": "Bientôt",
+    "active": "Service actif maintenant",
+    "next_turn": "Prochain Tour",
+    "breakfast": "Petits Déjeuners",
+    "lunch": "Midi",
+    "dinner": "Dîner",
+    "view_breakfast": "Voir Petits Déjeuners",
+    "view_lunch": "Voir Midi",
+    "view_dinner": "Voir Dîner",
+    "back_to_real": "Retour au Réel",
+    "preview_mode": "Mode Prévisualisation",
+    "viewing_selection": "Affichage de la sélection de",
+    "closing_in": "Fermeture de cuisine dans",
+    "closing_breakfast": "Fin petits déjeuners dans",
+    "closing_lunch": "Fin déjeuner dans",
+    "closing_dinner": "Fin dîner dans",
+    "status_breakfast": "Horaires des Petits Déjeuners",
+    "status_lunch": "Horaires du Déjeuner",
+    "status_dinner": "Horaires du Dîner",
+    "view_next_session": "Affichage de la prochaine session",
+    "tomorrow_breakfast": "Demain (Petits Déjeuners)",
+    "viewing_tomorrow": "Affichage du Menu de Demain",
+    "opening_tomorrow": "Ouverture demain à 13h00",
+    "available_in": "Disponible dans",
+    "tomorrow": "Demain",
+    "opening_in": "Ouverture"
+  },
+  "promo": {
+    "suggestion": "Suggestion",
+    "dinner_title": "Vous venez dîner ?",
+    "dinner_desc": "Notre carte du soir est notre proposition la plus ambitieuse, avec des plats exclusifs et les suggestions du chef.",
+    "dinner_cta": "Découvrir le dîner",
+    "full_experience": "Vous cherchez une expérience complète ?",
+    "full_experience_desc": "Notre carte du soir offre un choix beaucoup plus large de viandes grillées, de poissons frais et de suggestions exclusives du chef.",
+    "view_dinner_menu": "Voir la carte du soir"
+  },
+  "visual": {
+    "story": "Visual Story",
+    "our_kitchen": "Notre Cuisine"
+  },
+  "product": {
+    "terrace": "Terrasse",
+    "like": "J'aime",
+    "liked": "J'aime !"
+  },
+  "reservations": {
+    "title": "Réservez votre table",
+    "subtitle": "Des dîners inoubliables dans la meilleure ambiance",
+    "web_disabled_title": "Réservations par téléphone uniquement",
+    "web_disabled_message": "Nous n'acceptons pas actuellement de réservations automatiques en ligne. Veuillez nous appeler directement pour gérer votre réservation personnellement.",
+    "call_now": "Appeler maintenant"
+  }
+}
+
+

@@ -50,9 +50,9 @@ function LoginForm() {
   }
 
   return (
-    <div className="glass-card p-8 border border-white/10">
-      <h2 className="font-serif text-xl text-white mb-1">Iniciar Sesión</h2>
-      <p className="text-white/40 text-sm mb-8">Accede al panel de control</p>
+    <div className="glass-card p-8 border border-black/5">
+      <h2 className="font-serif text-xl text-[#111111] mb-1 font-bold">Iniciar Sesión</h2>
+      <p className="text-[#111111]/50 text-sm mb-8 font-medium">Accede al panel de control</p>
 
       {error && (
         <div className="flex items-center gap-3 bg-red-500/10 border border-red-500/30 text-red-400 p-4 mb-6 text-sm animate-in fade-in slide-in-from-top-1">
@@ -63,11 +63,11 @@ function LoginForm() {
 
       <form onSubmit={handleSubmit} className="space-y-5" noValidate>
         <div>
-          <label className="text-white/60 text-xs tracking-widest uppercase mb-2 block font-sans">
+          <label className="text-[#111111]/70 text-xs tracking-widest uppercase mb-2 block font-bold">
             Correo electrónico
           </label>
           <div className="relative">
-            <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30" />
+            <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#111111]/40" />
             <input
               type="email"
               value={email}
@@ -82,11 +82,11 @@ function LoginForm() {
         </div>
 
         <div>
-          <label className="text-white/60 text-xs tracking-widest uppercase mb-2 block font-sans">
+          <label className="text-[#111111]/70 text-xs tracking-widest uppercase mb-2 block font-bold">
             Contraseña
           </label>
           <div className="relative">
-            <Lock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30" />
+            <Lock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#111111]/40" />
             <input
               type={showPassword ? 'text' : 'password'}
               value={password}
@@ -100,7 +100,7 @@ function LoginForm() {
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-[#111111]/40 hover:text-[#111111]/70"
             >
               {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
             </button>
@@ -128,7 +128,7 @@ function LoginForm() {
 
 export default function AdminLoginPage() {
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center px-6 selection:bg-[#D4AF37] selection:text-black">
+    <div className="min-h-screen bg-[#FAFAFA] flex items-center justify-center px-6 selection:bg-[#D4AF37] selection:text-black">
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div
@@ -143,14 +143,14 @@ export default function AdminLoginPage() {
       <div className="relative w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-10">
-          <h1 className="font-serif text-3xl text-white mb-1 tracking-tight">{getBrand().name}</h1>
+          <h1 className="font-serif text-3xl text-[#111111] mb-1 tracking-tight font-bold">{getBrand().name}</h1>
           <p className="text-[#D4AF37] text-[10px] tracking-[0.4em] uppercase font-bold">Administración</p>
         </div>
 
         <Suspense fallback={
-          <div className="glass-card p-12 border border-white/10 flex flex-col items-center justify-center gap-4">
+          <div className="glass-card p-12 border border-black/5 flex flex-col items-center justify-center gap-4">
             <Loader2 className="animate-spin text-[#D4AF37]" size={32} />
-            <p className="text-white/20 text-xs uppercase tracking-widest">Cargando...</p>
+            <p className="text-[#111111]/30 text-xs uppercase tracking-widest font-bold">Cargando...</p>
           </div>
         }>
           <LoginForm />
@@ -159,14 +159,14 @@ export default function AdminLoginPage() {
         <div className="mt-8 flex flex-col items-center gap-6">
           <Link
             href="/"
-            className="text-white/40 hover:text-[#D4AF37] text-[10px] uppercase tracking-[0.2em] font-bold transition-all flex items-center gap-2 group"
+            className="text-[#111111]/50 hover:text-[#D4AF37] text-[10px] uppercase tracking-[0.2em] font-bold transition-all flex items-center gap-2 group"
           >
-            <span className="w-4 h-[1px] bg-white/20 group-hover:bg-[#D4AF37]/50 transition-all" />
+            <span className="w-4 h-[1px] bg-[#111111]/10 group-hover:bg-[#D4AF37]/50 transition-all" />
             Volver a la web principal
-            <span className="w-4 h-[1px] bg-white/20 group-hover:bg-[#D4AF37]/50 transition-all" />
+            <span className="w-4 h-[1px] bg-[#111111]/10 group-hover:bg-[#D4AF37]/50 transition-all" />
           </Link>
 
-          <p className="text-center text-white/20 text-[10px] uppercase tracking-widest">
+          <p className="text-center text-[#111111]/30 text-[10px] uppercase tracking-widest font-bold">
             Acceso exclusivo • Personal Autorizado
           </p>
         </div>

@@ -45,7 +45,7 @@ export default function LoadingScreen() {
             opacity: 0,
             transition: { duration: 0.8, ease: "easeInOut" }
           }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#FAFAFA]"
         >
           <motion.div
             initial={{ opacity: 1, scale: 1 }}
@@ -67,13 +67,12 @@ export default function LoadingScreen() {
                 fill
                 sizes="192px"
                 className="object-contain"
-                style={{ filter: 'brightness(0) invert(1)' }}
                 loading="eager"
               />
             ) : (
               <div className="flex flex-col items-center gap-4">
                 <Utensils size={64} className="text-[#D4AF37]" strokeWidth={1} />
-                <span className="text-white font-serif text-2xl tracking-[0.2em] uppercase">{brand.name}</span>
+                <span className="text-[#111111] font-serif text-2xl tracking-[0.2em] uppercase">{brand.name}</span>
               </div>
             )}
           </motion.div>

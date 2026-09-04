@@ -213,8 +213,8 @@ export default function AnalyticsDashboard({ userRole }: { userRole?: string }) 
 
       if (type === 'loyalty') {
         // --- DISEÑO FLYER FIDELIDAD (LUXURY MINIMALIST & HIGH CONVERSION) ---
-        // Fondo elegante oscuro infinito
-        doc.setFillColor(10, 10, 12)
+        // Fondo elegante claro con tono papel/salvia muy sutil
+        doc.setFillColor(248, 250, 248)
         doc.rect(0, 0, 148, 210, 'F')
 
         // Elemento gráfico superior - Círculos Coaxiales finos
@@ -231,7 +231,7 @@ export default function AnalyticsDashboard({ userRole }: { userRole?: string }) 
         doc.text('C L U B    E X C L U S I V O', 74, 30, { align: 'center' })
 
         // Marca Principal
-        doc.setTextColor(255, 255, 255)
+        doc.setTextColor(24, 60, 48) // Verde oscuro elegante
         doc.setFont('serif', 'bold')
         doc.setFontSize(26)
         doc.text('EL BALCONET', 74, 45, { align: 'center' })
@@ -243,14 +243,14 @@ export default function AnalyticsDashboard({ userRole }: { userRole?: string }) 
         doc.text('Más que una cena, una experiencia.', 74, 57, { align: 'center' })
 
         // Separador Minimalista
-        doc.setDrawColor(100, 100, 100)
-        doc.setLineWidth(0.1)
+        doc.setDrawColor(24, 60, 48)
+        doc.setLineWidth(0.2)
         doc.line(64, 66, 84, 66)
 
         // Beneficios (Usando caracteres seguros para la fuente base de jsPDF y centrados)
         doc.setFont('helvetica', 'normal')
         doc.setFontSize(11)
-        doc.setTextColor(220, 220, 220)
+        doc.setTextColor(60, 75, 65) // Gris verdoso oscuro
 
         doc.text('Acumula saldo gratuito en cada visita.', 74, 80, { align: 'center' })
         doc.text('Acceso privado a comidas o cenas.', 74, 88, { align: 'center' })
@@ -258,8 +258,8 @@ export default function AnalyticsDashboard({ userRole }: { userRole?: string }) 
 
         // El marco del código QR - Detalles angulares premium
         doc.setFillColor(255, 255, 255)
-        doc.setDrawColor(212, 175, 55)
-        doc.setLineWidth(0.6)
+        doc.setDrawColor(24, 60, 48) // Verde oscuro
+        doc.setLineWidth(0.8)
 
         // Esquina Superior Izquierda
         doc.line(34, 110, 42, 110)
@@ -279,11 +279,11 @@ export default function AnalyticsDashboard({ userRole }: { userRole?: string }) 
         const qrImg = await loadImage(qrUrl)
         doc.addImage(qrImg, 'PNG', 39, 115, 70, 70)
 
-        // Franja Dorada Inferior Sensación Urgencia / CTA Puro
-        doc.setFillColor(212, 175, 55)
+        // Franja Inferior Verde Oscuro Sensación Urgencia / CTA Puro
+        doc.setFillColor(24, 60, 48)
         doc.rect(0, 198, 148, 12, 'F')
 
-        doc.setTextColor(10, 10, 10)
+        doc.setTextColor(255, 255, 255)
         doc.setFontSize(10)
         doc.setFont('helvetica', 'bold')
         doc.text('COMIENZA AHORA  -  ESCANEA EL CÓDIGO', 74, 206, { align: 'center' })
@@ -292,12 +292,12 @@ export default function AnalyticsDashboard({ userRole }: { userRole?: string }) 
 
       } else {
         // --- DISEÑO FLYER CARTA (CLÁSICO, ELEGANTE) A6 ---
-        // Background - Elegant Dark
-        doc.setFillColor(10, 10, 10)
+        // Background - Elegant Light Sage/Paper
+        doc.setFillColor(248, 250, 248)
         doc.rect(0, 0, 105, 148, 'F')
 
         // Border
-        doc.setDrawColor(212, 175, 55)
+        doc.setDrawColor(24, 60, 48) // Verde oscuro elegante
         doc.setLineWidth(0.5)
         doc.rect(4, 4, 97, 140)
 
@@ -306,7 +306,7 @@ export default function AnalyticsDashboard({ userRole }: { userRole?: string }) 
         doc.setFontSize(18)
         doc.text('EL BALCONET', 52.5, 21, { align: 'center' })
 
-        doc.setTextColor(255, 255, 255)
+        doc.setTextColor(24, 60, 48) // Verde oscuro
         doc.setFont('serif', 'bold')
         doc.setFontSize(16)
         doc.text('La nostra gastronomia', 52.5, 39, { align: 'center' })
@@ -317,7 +317,7 @@ export default function AnalyticsDashboard({ userRole }: { userRole?: string }) 
 
         doc.setFont('helvetica', 'normal')
         doc.setFontSize(9)
-        doc.setTextColor(180, 180, 180)
+        doc.setTextColor(60, 75, 65) // Gris verdoso oscuro
         doc.text('Escaneja per descobrir el nostre Menú del Dia', 52.5, 53, { align: 'center' })
         doc.text('elaborat amb productes frescos del Maresme', 52.5, 58, { align: 'center' })
         doc.text("i la nostra selecció de tapes d'autor.", 52.5, 63, { align: 'center' })
@@ -336,7 +336,7 @@ export default function AnalyticsDashboard({ userRole }: { userRole?: string }) 
         doc.text('Bon profit!', 52.5, 129, { align: 'center' })
 
         doc.setFontSize(7)
-        doc.setTextColor(100, 100, 100)
+        doc.setTextColor(120, 130, 125)
         doc.setFont('helvetica', 'normal')
         doc.text('EL BALCONET RESTAURANT', 52.5, 136, { align: 'center' })
         doc.text('Torrent Mateu Mas, 31, 08338 Premià de Dalt, Barcelona', 52.5, 140, { align: 'center' })

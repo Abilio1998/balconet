@@ -69,6 +69,12 @@ export default function ReservationsManager({ role }: ReservationsManagerProps) 
   const [currentTime, setCurrentTime] = useState<Date | null>(null)
   const [upcomingDays, setUpcomingDays] = useState<{ date: string; count: number; pax: number }[]>([])
   const [showUpcoming, setShowUpcoming] = useState(true)
+  const [theme, setTheme] = useState<'dark' | 'light'>('dark')
+
+  useEffect(() => {
+    const saved = localStorage.getItem('reservations-theme')
+    if (saved === 'light') setTheme('light')
+  }, [])
 
   // Modal states
   const [showAddModal, setShowAddModal] = useState(false)
@@ -767,7 +773,7 @@ export default function ReservationsManager({ role }: ReservationsManagerProps) 
       )}
 
       {activeTab === 'list' ? (
-        <div className="space-y-6">
+        <div className={`space-y-6 ${theme === 'light' ? 'reservations-light-mode' : ''}`}>
           {/* Sticky Action Bar */}
           <div className="sticky top-0 z-30 bg-[#0A0A0A]/95 backdrop-blur-xl border-b border-white/10 px-4 py-4 mb-8 -mx-4 md:-mx-8 shadow-2xl">
             <div className="max-w-7xl mx-auto flex flex-col xl:flex-row gap-6 xl:items-center justify-between">
@@ -1320,6 +1326,33 @@ export default function ReservationsManager({ role }: ReservationsManagerProps) 
 
             <div className="space-y-6">
               <h3 className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em] font-bold mb-4 border-b border-[#D4AF37]/20 pb-2">Control Maestro</h3>
+
+              {/* Theme Toggle */}
+              <div className={`p-4 rounded-sm border transition-all duration-500 bg-white/5 border-white/10`}>
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <h4 className="text-[11px] font-bold uppercase tracking-widest mb-1 text-white">
+                      MODO CLARO (MAÑANAS)
+                    </h4>
+                    <p className="text-[9px] text-white/40 leading-relaxed">
+                      Activa esta opción si el sol no te permite ver bien la pantalla por la mañana. Cambia los colores de la agenda a tonos claros.
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const newTheme = theme === 'dark' ? 'light' : 'dark'
+                      setTheme(newTheme)
+                      localStorage.setItem('reservations-theme', newTheme)
+                    }}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${theme === 'light' ? 'bg-[#D4AF37]' : 'bg-white/20'}`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${theme === 'light' ? 'translate-x-6' : 'translate-x-1'}`}
+                    />
+                  </button>
+                </div>
+              </div>
 
               <div className={`p-4 rounded-sm border transition-all duration-500 ${settings?.disable_web_reservations ? 'bg-red-500/10 border-red-500/50' : 'bg-green-500/5 border-green-500/20'}`}>
                 <div className="flex items-center justify-between gap-4">

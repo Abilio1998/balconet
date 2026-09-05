@@ -737,8 +737,8 @@ export default function DynamicCartaEditor({ onDirtyChange }: { onDirtyChange?: 
         const errorData = await res.json()
         const detailMsg = errorData.details
           ? (Array.isArray(errorData.details)
-            ? errorData.details.map((d: any) => `${d.path.join('.')}: ${d.message}`).join(', ')
-            : errorData.details)
+            ? errorData.details.map((d: any) => `${d.path?.join('.')} ${d.message}`).join(', ')
+            : (typeof errorData.details === 'object' ? JSON.stringify(errorData.details) : errorData.details))
           : (errorData.error || 'Error desconocido')
         throw new Error(`Error del servidor: ${detailMsg}`)
       }

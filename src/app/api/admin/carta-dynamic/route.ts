@@ -210,7 +210,7 @@ export async function POST(request: NextRequest) {
     console.error('Save Error Details:', err)
     return NextResponse.json({ 
       error: 'Failed to save carta', 
-      details: err instanceof Error ? err.message : String(err) 
+      details: err instanceof Error ? err.message : JSON.stringify(err) 
     }, { status: 500 })
   }
 }

@@ -470,10 +470,15 @@ export default function CartaSection({ session = 'normal', selectedAllergens, se
                   <div className="flex justify-center">
                     <div className={`flex bg-black/5 border border-black/10 rounded-sm p-1 gap-1 no-print ${compact ? 'scale-90 md:scale-100' : ''}`}>
                       {[
-                        { id: 'breakfast', icon: <Clock size={16} />, label: t('sessions.breakfast') },
-                        { id: 'lunch', icon: <Zap size={16} />, label: t('sessions.lunch') },
-                        { id: 'dinner', icon: <Sparkles size={16} />, label: t('sessions.dinner') }
-                      ].map((s) => {
+                        { id: 'breakfast', icon: <Clock size={16} />, label: t('sessions.breakfast'), activeKey: 'breakfast_menu_active' },
+                        { id: 'lunch', icon: <Zap size={16} />, label: t('sessions.lunch'), activeKey: 'lunch_menu_active' },
+                        { id: 'dinner', icon: <Sparkles size={16} />, label: t('sessions.dinner'), activeKey: 'dinner_menu_active' }
+                      ].filter((s) => {
+                        // Si settings no está disponible, mostramos todos los botones
+                        if (!settings) return true
+                        // Si el campo es exactamente false, ocultamos el botón
+                        return settings[s.activeKey as keyof typeof settings] !== false
+                      }).map((s) => {
                         const isSelected = activeSession === s.id
                         const isReal = session === s.id
 
@@ -507,6 +512,7 @@ export default function CartaSection({ session = 'normal', selectedAllergens, se
                           </button>
                         )
                       })}
+
                     </div>
                   </div>
                 </div>

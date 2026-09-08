@@ -18,7 +18,7 @@ const promoScheduleSchema = z.object({
 })
 
 const productSchema = z.object({
-  id: z.string().uuid().optional(),
+  id: z.string().optional(),
   name: z.string().min(1).max(200),
   name_ca: z.string().max(200).optional().nullable(),
   name_en: z.string().max(200).optional().nullable(),
@@ -45,7 +45,7 @@ const productSchema = z.object({
 })
 
 const categorySchema = z.object({
-  id: z.string().uuid().optional(),
+  id: z.string().optional(),
   name: z.string().min(1).max(200),
   name_ca: z.string().max(200).optional().nullable(),
   name_en: z.string().max(200).optional().nullable(),

@@ -86,7 +86,7 @@ export default function ReviewsSection() {
   if (!visible || (reviews.length === 0 && !loading)) return null
 
   return (
-    <section className="bg-[#FAFAFA] relative overflow-hidden" id="reviews" ref={ref}>
+    <section className="relative overflow-hidden" id="reviews" style={{ backgroundColor: '#F4EAD0' }} ref={ref}>
       {/* Background glows */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#D4AF37]/8 rounded-full blur-[120px]" />

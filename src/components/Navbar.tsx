@@ -66,9 +66,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[110] transition-all duration-500 ${mobileOpen ? 'bg-white' : 'bg-white/95 backdrop-blur-md border-b border-black/5'
+      className={`fixed top-0 left-0 right-0 z-[110] transition-all duration-500 ${mobileOpen ? '' : 'backdrop-blur-md border-b border-black/5'
         } ${isScrolled && !mobileOpen ? 'py-2 shadow-sm' : 'py-4'
         }`}
+      style={{ backgroundColor: mobileOpen ? '#F4EAD0' : 'rgba(244, 234, 208, 0.95)' }}
     >
       <nav className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-500 ${mobileOpen ? 'py-2' : ''}`}>
         {/* Logo */}
@@ -138,7 +139,7 @@ export default function Navbar() {
               />
             </button>
             {langOpen && (
-              <div className="absolute right-0 top-full mt-2 bg-white border border-black/5 min-w-[140px] shadow-2xl z-[10000] rounded-sm overflow-hidden">
+              <div className="absolute right-0 top-full mt-2 border border-black/5 min-w-[140px] shadow-2xl z-[10000] rounded-sm overflow-hidden" style={{ backgroundColor: '#F4EAD0' }}>
                 {LANGUAGES.map((lang) => (
                   <button
                     key={lang.code}

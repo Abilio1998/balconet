@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 
 export default function ReservarPage() {
   return (
-    <main className="min-h-screen bg-[#FAFAFA] font-sans selection:bg-[#D4AF37] selection:text-white">
+    <main className="min-h-screen font-sans selection:bg-[#D4AF37] selection:text-white" style={{ backgroundColor: '#F4EAD0' }}>
       <Navbar />
       
       <div className="pt-32 pb-20 px-4">

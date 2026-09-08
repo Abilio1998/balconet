@@ -21,7 +21,7 @@ export default function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="about" className="py-24 md:py-36 bg-[#FAFAFA]">
+    <section id="about" className="py-24 md:py-36" style={{ backgroundColor: '#F4EAD0' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Left: Text */}

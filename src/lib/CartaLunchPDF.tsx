@@ -163,7 +163,7 @@ export const CartaLunchPDF = ({ categories, lang, session = 'lunch', ReactPdf }:
     page: {
       padding: 22,
       paddingBottom: 65, // Safety margin for fixed footer
-      backgroundColor: '#FDFDF9',
+      backgroundColor: '#F4EAD0',
       fontFamily: 'Century Schoolbook',
       position: 'relative'
     },
@@ -263,7 +263,7 @@ export const CartaLunchPDF = ({ categories, lang, session = 'lunch', ReactPdf }:
       marginLeft: 10
     },
     premiumFeaturedBox: {
-      backgroundColor: '#FAF7F0',
+      backgroundColor: '#EDE0C2',
       borderWidth: 1.5,
       borderColor: goldColor,
       padding: 12,
@@ -457,7 +457,7 @@ export const CartaLunchPDF = ({ categories, lang, session = 'lunch', ReactPdf }:
                   {item.data.map((cat: PDFCategory, cIdx: number) => (
                     <React.Fragment key={cIdx}>
                       <View style={{ width: '47%' }}>
-                        <View style={{ backgroundColor: '#FAF8F5', paddingHorizontal: 6, paddingVertical: 4, marginBottom: 8, borderLeftWidth: 2, borderLeftColor: goldColor }}>
+                        <View style={{ backgroundColor: '#E8D9B5', paddingHorizontal: 6, paddingVertical: 4, marginBottom: 8, borderLeftWidth: 2, borderLeftColor: goldColor }}>
                           <Text style={[styles.premiumCategoryTextSecondary, { textAlign: 'left', color: goldColor }]}>
                             {getTranslatedName(cat)}
                           </Text>

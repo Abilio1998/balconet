@@ -163,7 +163,8 @@ export default function GastronomyHub() {
     <section 
       id="gastronomy" 
       data-engagement-label={activeTab === 'menu' ? 'Menú del Día' : 'La Carta (General)'}
-      className="bg-[#FAFAFA] pt-4 md:pt-8 pb-8 md:pb-12 relative" 
+      className="pt-4 md:pt-8 pb-8 md:pb-12 relative" 
+      style={{ backgroundColor: '#F4EAD0' }}
       ref={ref} 
       suppressHydrationWarning
     >

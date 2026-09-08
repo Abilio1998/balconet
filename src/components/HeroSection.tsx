@@ -75,7 +75,7 @@ export default function HeroSection() {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
       {/* Background with fallback */}
-      <div className="absolute inset-0 z-0 bg-[#FAFAFA]">
+      <div className="absolute inset-0 z-0" style={{ backgroundColor: '#F4EAD0' }}>
         <AnimatePresence mode="wait">
           {!loading && currentImage && (
             <motion.div

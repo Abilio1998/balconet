@@ -136,7 +136,7 @@ export default function MenuPage() {
 
 
   return (
-    <main className="min-h-screen bg-[#FAFAFA] flex flex-col pt-20 md:pt-24">
+    <main className="min-h-screen flex flex-col pt-20 md:pt-24" style={{ backgroundColor: '#F4EAD0' }}>
       <FeaturedDishModal />
       <Navbar />
       

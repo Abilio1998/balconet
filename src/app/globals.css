@@ -7,11 +7,14 @@
     --gold-dark: #B8960C;
     --charcoal: #111111;
     --charcoal-light: #1A1A1A;
+    --bg-cream: #F4EAD0;
+    --bg-cream-light: #F8F2E3;
   }
 
   html,
   body {
-    @apply max-w-full bg-[#FAFAFA] text-[#111111] antialiased font-sans;
+    @apply max-w-full text-[#111111] antialiased font-sans;
+    background-color: var(--bg-cream);
   }
 
   h1,
@@ -33,7 +36,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #FAFAFA;
+    background: var(--bg-cream);
   }
 
   ::-webkit-scrollbar-thumb {
@@ -104,7 +107,8 @@
   }
 
   .glass-card {
-    @apply bg-white/70 backdrop-blur-md border border-black/5 rounded-sm shadow-sm;
+    @apply backdrop-blur-md border border-black/5 rounded-sm shadow-sm;
+    background-color: rgba(244, 234, 208, 0.75);
   }
 
   .gold-text {
@@ -216,7 +220,7 @@
 
   /* Reset layout for printing */
   html, body {
-    background: white !important;
+    background: #F4EAD0 !important;
     color: black !important;
     width: 100%;
     height: auto;
@@ -225,7 +229,7 @@
 
   main {
     padding-top: 0 !important;
-    background: white !important;
+    background: #F4EAD0 !important;
   }
 
   /* Ensure text is dark and legible */

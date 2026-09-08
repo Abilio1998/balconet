@@ -421,7 +421,7 @@ export default function CartaSection({ session = 'normal', selectedAllergens, se
 
   return (
     <>
-      <div className="py-0 bg-[#FAFAFA] relative" ref={ref} suppressHydrationWarning>
+      <div className="py-0 relative" style={{ backgroundColor: '#F4EAD0' }} ref={ref} suppressHydrationWarning>
         <div className="max-w-5xl mx-auto px-4 md:px-6 mb-6 md:mb-10" suppressHydrationWarning>
           {!mounted || loading ? (
             <div className="space-y-4 animate-pulse">
@@ -575,7 +575,7 @@ export default function CartaSection({ session = 'normal', selectedAllergens, se
                 )}
                 {/* Category Quick Navigation */}
                 {filteredCategories.length > 0 && (
-                  <div className={`sticky ${compact ? 'top-[70px] md:top-[85px]' : 'top-[64px] md:top-[80px]'} z-[105] bg-[#FAFAFA]/95 backdrop-blur-xl shadow-sm border-b border-black/5 transition-all duration-300`}>
+                  <div className={`sticky ${compact ? 'top-[70px] md:top-[85px]' : 'top-[64px] md:top-[80px]'} z-[105] backdrop-blur-xl shadow-sm border-b border-black/5 transition-all duration-300`} style={{ backgroundColor: 'rgba(244, 234, 208, 0.95)' }}>
                     <div className="relative flex items-center">
 
                       {/* Flecha izquierda */}

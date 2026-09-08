@@ -45,7 +45,7 @@ export default function ContactSection() {
   }, [brand.googleMapsEmbed])
 
   return (
-    <section id="contact" className="py-24 md:py-36 bg-[#FAFAFA]" ref={ref}>
+    <section id="contact" className="py-24 md:py-36" style={{ backgroundColor: '#F4EAD0' }} ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div

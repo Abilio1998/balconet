@@ -192,7 +192,7 @@ export const MenuPDF = ({ menu, lang, logoData, ReactPdf }: MenuPDFProps) => {
       paddingRight: 45,
       fontFamily: 'Georgia',
       position: 'relative',
-      backgroundColor: '#FFFFFF',
+      backgroundColor: '#F4EAD0',
       flexDirection: 'column'
     },
     logoContainer: {

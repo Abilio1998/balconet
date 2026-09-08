@@ -45,7 +45,8 @@ export default function LoadingScreen() {
             opacity: 0,
             transition: { duration: 0.8, ease: "easeInOut" }
           }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#FAFAFA]"
+          className="fixed inset-0 z-[9999] flex items-center justify-center"
+          style={{ backgroundColor: '#F4EAD0' }}
         >
           <motion.div
             initial={{ opacity: 1, scale: 1 }}

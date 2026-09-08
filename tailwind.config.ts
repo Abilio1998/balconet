@@ -19,6 +19,11 @@ const config: Config = {
           light: '#1A1A1A',
           mid: '#222222',
         },
+        cream: {
+          DEFAULT: '#F4EAD0',
+          light: '#F8F2E3',
+          dark: '#E8D9B5',
+        },
       },
       fontFamily: {
         serif: ['Playfair Display', 'Georgia', 'serif'],
@@ -55,7 +60,7 @@ const config: Config = {
       },
       backgroundImage: {
         'gold-gradient': 'linear-gradient(135deg, #D4AF37 0%, #E8C84A 50%, #B8960C 100%)',
-        'light-gradient': 'linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%)',
+        'light-gradient': 'linear-gradient(135deg, #F8F2E3 0%, #F4EAD0 100%)',
       },
     },
   },

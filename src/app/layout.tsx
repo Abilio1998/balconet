@@ -111,17 +111,17 @@ export default async function RootLayout({
   const brand = BRAND_CONFIG.isDemoMode ? BRAND_CONFIG.demo : BRAND_CONFIG.real
 
   return (
-    <html lang={serverLocale} className={`${inter.variable} ${playfair.variable} bg-[#FAFAFA]`} style={{ backgroundColor: '#FAFAFA' }} suppressHydrationWarning>
+    <html lang={serverLocale} className={`${inter.variable} ${playfair.variable}`} style={{ backgroundColor: '#F4EAD0' }} suppressHydrationWarning>
       <head>
         {/* Preconnect to Supabase storage for faster hero images */}
         <link rel="preconnect" href="https://supabase.co" />
         <link rel="dns-prefetch" href="https://supabase.co" />
       </head>
-      <body className="bg-[#FAFAFA] text-[#111111] antialiased min-h-screen relative" suppressHydrationWarning>
+      <body className="text-[#111111] antialiased min-h-screen relative" style={{ backgroundColor: '#F4EAD0' }} suppressHydrationWarning>
         <SessionProvider>
           <I18nProvider initialLocale={serverLocale} initialTranslations={initialTranslations}>
             <ClientOnlyComponents />
-            <Suspense fallback={<div className="fixed inset-0 bg-[#FAFAFA]" />}>
+            <Suspense fallback={<div className="fixed inset-0" style={{ backgroundColor: '#F4EAD0' }} />}>
               {children}
             </Suspense>
             <script

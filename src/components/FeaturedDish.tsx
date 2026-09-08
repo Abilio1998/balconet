@@ -57,7 +57,7 @@ export default function FeaturedDish() {
   const displayDescription = (locale === 'es' ? featured.description : (featured as any)[`description_${locale}`]) || featured.description || t('featured.default_description')
 
   return (
-    <section id="featured" className="relative py-12 md:py-24 bg-[#FAFAFA] overflow-hidden border-y border-black/5">
+    <section id="featured" className="relative py-12 md:py-24 overflow-hidden border-y border-black/5" style={{ backgroundColor: '#F4EAD0' }}>
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-[#D4AF37]/5 blur-[120px] -z-10" />
       <div className="absolute bottom-0 left-0 w-1/4 h-2/3 bg-black/5 blur-[100px] -z-10" />
@@ -90,7 +90,7 @@ export default function FeaturedDish() {
                   <p className="text-xs uppercase tracking-[0.3em] mt-4 font-bold">{brand.name} Experience</p>
                 </div>
               )}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#FAFAFA] via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#F4EAD0] via-transparent to-transparent opacity-80" />
             </div>
 
             {/* Badge */}

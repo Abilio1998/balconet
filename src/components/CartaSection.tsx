@@ -685,9 +685,9 @@ export default function CartaSection({ session = 'normal', selectedAllergens, se
                             className="space-y-2"
                           >
                             {/* Section Header - Only if it's not the only category or for visual clarity */}
-                            <div className="flex items-center gap-4 mb-6">
-                              <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] font-bold whitespace-nowrap">{categoryName}</span>
-                              <div className="h-px bg-gradient-to-r from-[#D4AF37]/20 to-transparent flex-grow" />
+                            <div className="flex items-center gap-3 mb-6">
+                              <span className="text-[10px] uppercase tracking-[0.15em] md:tracking-[0.25em] text-[#D4AF37] font-bold break-words min-w-0 shrink">{categoryName}</span>
+                              <div className="h-px bg-gradient-to-r from-[#D4AF37]/20 to-transparent flex-grow shrink-0 min-w-[16px]" />
                             </div>
 
                             <div className="grid grid-cols-1 gap-1">
@@ -823,9 +823,9 @@ export default function CartaSection({ session = 'normal', selectedAllergens, se
                           transition={{ duration: 0.6, delay: 0.2 + catIdx * 0.1 }}
                           className="break-inside-avoid mb-8 md:mb-16 space-y-8 scroll-mt-64"
                         >
-                          <div className={`flex items-center gap-4 pt-4 lg:pt-0 ${compact ? 'mb-4' : 'mb-8'}`}>
-                            <h3 className={`font-serif text-[#D4AF37] uppercase tracking-[0.3em] whitespace-nowrap ${compact ? 'text-sm' : 'text-lg'}`}>{categoryName}</h3>
-                            <div className="h-px bg-[#D4AF37]/20 w-full" />
+                          <div className={`flex items-center gap-3 pt-4 lg:pt-0 ${compact ? 'mb-4' : 'mb-8'}`}>
+                            <h3 className={`font-serif text-[#D4AF37] uppercase tracking-[0.15em] md:tracking-[0.25em] break-words min-w-0 shrink ${compact ? 'text-sm' : 'text-lg'}`}>{categoryName}</h3>
+                            <div className="h-px bg-[#D4AF37]/20 flex-grow shrink-0 min-w-[16px]" />
                           </div>
 
                           <div className="space-y-10">

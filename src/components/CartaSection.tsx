@@ -585,13 +585,13 @@ export default function CartaSection({ session = 'normal', selectedAllergens, se
                         className={`absolute left-0 z-10 h-full px-2 flex items-center transition-all duration-200 ${canScrollLeft ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
                           }`}
                       >
-                        <span className="flex items-center justify-center w-7 h-7 rounded-full bg-white border border-black/10 text-black hover:text-[#D4AF37] hover:border-[#D4AF37] shadow-sm transition-colors">
+                        <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#F4EAD0] border border-black/10 text-black hover:text-[#D4AF37] hover:border-[#D4AF37] shadow-sm transition-colors">
                           <ChevronLeft size={14} />
                         </span>
                       </button>
 
                       {/* Gradiente izquierdo */}
-                      <div className={`absolute left-8 top-0 bottom-0 w-10 z-[1] pointer-events-none bg-gradient-to-r from-[#FAFAFA]/95 to-transparent transition-opacity duration-200 ${canScrollLeft ? 'opacity-100' : 'opacity-0'}`} />
+                      <div className={`absolute left-8 top-0 bottom-0 w-10 z-[1] pointer-events-none bg-gradient-to-r from-[#F4EAD0]/95 to-transparent transition-opacity duration-200 ${canScrollLeft ? 'opacity-100' : 'opacity-0'}`} />
 
                       {/* Scroll container */}
                       <div
@@ -643,7 +643,7 @@ export default function CartaSection({ session = 'normal', selectedAllergens, se
                       </div>
 
                       {/* Gradiente derecho */}
-                      <div className={`absolute right-8 top-0 bottom-0 w-10 z-[1] pointer-events-none bg-gradient-to-l from-[#FAFAFA]/95 to-transparent transition-opacity duration-200 ${canScrollRight ? 'opacity-100' : 'opacity-0'}`} />
+                      <div className={`absolute right-8 top-0 bottom-0 w-10 z-[1] pointer-events-none bg-gradient-to-l from-[#F4EAD0]/95 to-transparent transition-opacity duration-200 ${canScrollRight ? 'opacity-100' : 'opacity-0'}`} />
 
                       {/* Flecha derecha */}
                       <button
@@ -652,7 +652,7 @@ export default function CartaSection({ session = 'normal', selectedAllergens, se
                         className={`absolute right-0 z-10 h-full px-2 flex items-center transition-all duration-200 ${canScrollRight ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
                           }`}
                       >
-                        <span className="flex items-center justify-center w-7 h-7 rounded-full bg-white border border-black/10 text-black shadow-sm hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors">
+                        <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#F4EAD0] border border-black/10 text-black shadow-sm hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors">
                           <ChevronRight size={14} />
                         </span>
                       </button>

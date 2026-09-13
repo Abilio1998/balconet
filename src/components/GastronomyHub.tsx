@@ -231,6 +231,7 @@ export default function GastronomyHub() {
         </div>
 
         {/* Unified Allergen Filter System */}
+        {hours?.show_allergens_in_web !== false && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -292,6 +293,7 @@ export default function GastronomyHub() {
             )}
           </div>
         </motion.div>
+        )}
 
 
         {/* Content Area */}

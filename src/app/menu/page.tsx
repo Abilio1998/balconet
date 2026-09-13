@@ -184,6 +184,7 @@ export default function MenuPage() {
         </div>
 
         {/* Unified Allergen Filter System */}
+        {settings?.show_allergens_in_web !== false && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -245,6 +246,7 @@ export default function MenuPage() {
             )}
           </div>
         </motion.div>
+        )}
 
         {/* Content Area */}
         <div 

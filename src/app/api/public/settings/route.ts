@@ -11,6 +11,7 @@ export const revalidate = 0
 
 export async function GET() {
   try {
+    // Fetch base settings without optional columns first to avoid 500 if migration hasn't run
     const { data: settings, error } = await supabasePublic
       .from('reservation_settings')
       .select('lunch_start, lunch_end, dinner_start, dinner_end, breakfast_start, breakfast_end, lunch_menu_active, dinner_menu_active, breakfast_menu_active')
@@ -19,8 +20,20 @@ export async function GET() {
 
     if (error) throw error
 
+    // Try to fetch optional columns added by migrations — gracefully degrade if missing
+    const { data: extra } = await supabasePublic
+      .from('reservation_settings')
+      .select('show_allergens_in_web')
+      .eq('is_active', true)
+      .single()
+
+    const result = {
+      ...settings,
+      show_allergens_in_web: extra?.show_allergens_in_web ?? true,
+    }
+
     return NextResponse.json(
-      { settings },
+      { settings: result },
       {
         headers: {
           'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',

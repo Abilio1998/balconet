@@ -44,6 +44,7 @@ type SettingsData = {
   is_accepting_inside: boolean
   is_accepting_terrace: boolean
   disable_web_reservations: boolean
+  show_allergens_in_web: boolean
 }
 
 interface ReservationsManagerProps {
@@ -1373,6 +1374,30 @@ export default function ReservationsManager({ role }: ReservationsManagerProps) 
                   >
                     <span
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings?.disable_web_reservations ? 'translate-x-6' : 'translate-x-1'}`}
+                    />
+                  </button>
+                </div>
+              </div>
+
+              <div className={`p-4 rounded-sm border transition-all duration-500 ${!settings?.show_allergens_in_web ? 'bg-red-500/10 border-red-500/50' : 'bg-green-500/5 border-green-500/20'}`}>
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <h4 className={`text-[11px] font-bold uppercase tracking-widest mb-1 ${!settings?.show_allergens_in_web ? 'text-red-400' : 'text-green-400'}`}>
+                      {!settings?.show_allergens_in_web ? 'FILTROS DE ALÉRGENOS OCULTOS' : 'FILTROS DE ALÉRGENOS VISIBLES'}
+                    </h4>
+                    <p className="text-[9px] text-white/40 leading-relaxed">
+                      {!settings?.show_allergens_in_web
+                        ? 'Los clientes no verán la barra de filtros de alérgenos en la web principal.'
+                        : 'Los clientes pueden filtrar la carta por alérgenos desde la web.'}
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setSettings(s => s ? ({ ...s, show_allergens_in_web: !s.show_allergens_in_web }) : null)}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${!settings?.show_allergens_in_web ? 'bg-red-500' : 'bg-green-600'}`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${!settings?.show_allergens_in_web ? 'translate-x-6' : 'translate-x-1'}`}
                     />
                   </button>
                 </div>

@@ -9,6 +9,10 @@ import {
   CheckCircle,
   AlertTriangle,
   XCircle,
+  CalendarX,
+  Plus,
+  Trash2,
+  Lock,
 } from 'lucide-react'
 
 type TableStat = {
@@ -23,6 +27,12 @@ type DbStats = {
   freeTierLimit: number
   percentUsed: number
   todayRequests: number
+}
+
+type ClosedDateOverride = {
+  id: string
+  reservation_date: string
+  is_closed: boolean
 }
 
 function getStatusColor(percent: number) {
@@ -42,8 +52,16 @@ export default function AdminSettingsPage() {
   const [dbStats, setDbStats] = useState<DbStats | null>(null)
   const [loadingDb, setLoadingDb] = useState(true)
 
+  // Estado para fechas cerradas
+  const [closedDates, setClosedDates] = useState<ClosedDateOverride[]>([])
+  const [loadingDates, setLoadingDates] = useState(true)
+  const [newClosedDate, setNewClosedDate] = useState('')
+  const [savingDate, setSavingDate] = useState(false)
+  const [dateMsg, setDateMsg] = useState<{ type: 'ok' | 'err', text: string } | null>(null)
+
   useEffect(() => {
     fetchDbStats()
+    fetchClosedDates()
   }, [])
 
   const fetchDbStats = async () => {
@@ -59,8 +77,63 @@ export default function AdminSettingsPage() {
     }
   }
 
+  const fetchClosedDates = async () => {
+    setLoadingDates(true)
+    try {
+      const res = await fetch('/api/admin/reservations/override')
+      const data = await res.json()
+      // Filtrar solo los que tienen is_closed = true
+      const closed = (data.overrides || []).filter((o: any) => o.is_closed === true)
+      setClosedDates(closed)
+    } catch (err) {
+      console.error('Error fetching closed dates:', err)
+    } finally {
+      setLoadingDates(false)
+    }
+  }
+
+  const addClosedDate = async () => {
+    if (!newClosedDate) return
+    setSavingDate(true)
+    setDateMsg(null)
+    try {
+      const res = await fetch('/api/admin/reservations/override', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ reservation_date: newClosedDate, is_closed: true })
+      })
+      if (!res.ok) throw new Error('Error al guardar')
+      setDateMsg({ type: 'ok', text: `Fecha ${newClosedDate} bloqueada correctamente.` })
+      setNewClosedDate('')
+      await fetchClosedDates()
+    } catch {
+      setDateMsg({ type: 'err', text: 'No se pudo bloquear la fecha. Inténtalo de nuevo.' })
+    } finally {
+      setSavingDate(false)
+    }
+  }
+
+  const removeClosedDate = async (date: string) => {
+    try {
+      await fetch(`/api/admin/reservations/override?date=${date}`, { method: 'DELETE' })
+      setClosedDates(prev => prev.filter(d => d.reservation_date !== date))
+    } catch {
+      alert('Error al eliminar la fecha bloqueada.')
+    }
+  }
+
   const globalStatus = dbStats ? getStatusColor(dbStats.percentUsed) : getStatusColor(0)
   const GlobalIcon = globalStatus.icon
+
+  // Ordenar fechas bloqueadas de más próxima a más lejana
+  const sortedClosedDates = [...closedDates].sort((a, b) =>
+    a.reservation_date.localeCompare(b.reservation_date)
+  )
+
+  const formatDate = (dateStr: string) => {
+    const [y, m, d] = dateStr.split('-')
+    return `${d}/${m}/${y}`
+  }
 
   return (
     <div className="max-w-5xl mx-auto py-8 space-y-10 px-4">
@@ -72,10 +145,91 @@ export default function AdminSettingsPage() {
           </div>
           <div>
             <h1 className="font-serif text-3xl text-white">Ajustes de Sistema</h1>
-            <p className="text-white/40 text-sm mt-0.5">Monitorización del sistema de administración.</p>
+            <p className="text-white/40 text-sm mt-0.5">Configuración avanzada y monitorización del sistema.</p>
           </div>
         </div>
       </div>
+
+      {/* ─── SECCIÓN: FECHAS CERRADAS ─── */}
+      <section className="bg-[#111111] border border-white/10 rounded-sm p-8">
+        <div className="flex items-center gap-3 mb-6">
+          <CalendarX size={18} className="text-red-400" />
+          <div>
+            <h2 className="font-serif text-xl text-white">Días Cerrados por Fecha</h2>
+            <p className="text-white/30 text-xs mt-0.5">
+              Bloquea fechas específicas en las que el restaurante no abrirá (festivos, vacaciones, eventos privados…).
+              Los clientes verán el mensaje de &quot;restaurante cerrado&quot; al seleccionar ese día.
+            </p>
+          </div>
+        </div>
+
+        {/* Añadir fecha */}
+        <div className="flex items-center gap-3 mb-6">
+          <input
+            type="date"
+            value={newClosedDate}
+            min={new Date().toISOString().split('T')[0]}
+            onChange={e => setNewClosedDate(e.target.value)}
+            className="bg-white/5 border border-white/10 p-3 text-white text-sm focus:border-red-400 outline-none transition-all rounded-sm flex-1 max-w-[200px]"
+          />
+          <button
+            onClick={addClosedDate}
+            disabled={!newClosedDate || savingDate}
+            className="flex items-center gap-2 bg-red-500/10 border border-red-500/30 text-red-400 hover:bg-red-500/20 px-4 py-3 rounded-sm text-sm font-medium transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            {savingDate ? <RefreshCw size={14} className="animate-spin" /> : <Plus size={14} />}
+            Bloquear fecha
+          </button>
+        </div>
+
+        {dateMsg && (
+          <div className={`mb-4 p-3 rounded-sm text-sm flex items-center gap-2 ${
+            dateMsg.type === 'ok'
+              ? 'bg-emerald-500/10 border border-emerald-500/20 text-emerald-400'
+              : 'bg-red-500/10 border border-red-500/20 text-red-400'
+          }`}>
+            {dateMsg.type === 'ok' ? <CheckCircle size={14} /> : <XCircle size={14} />}
+            {dateMsg.text}
+          </div>
+        )}
+
+        {/* Lista de fechas bloqueadas */}
+        {loadingDates ? (
+          <div className="space-y-2">
+            {[1, 2].map(i => <div key={i} className="h-12 bg-white/5 rounded-sm animate-pulse" />)}
+          </div>
+        ) : sortedClosedDates.length === 0 ? (
+          <div className="text-center py-8 border border-dashed border-white/10 rounded-sm">
+            <CalendarX size={28} className="text-white/20 mx-auto mb-2" />
+            <p className="text-white/30 text-sm">No hay fechas bloqueadas.</p>
+            <p className="text-white/20 text-xs mt-1">El restaurante está abierto todos los días.</p>
+          </div>
+        ) : (
+          <div className="space-y-2">
+            {sortedClosedDates.map(item => (
+              <div
+                key={item.id}
+                className="flex items-center justify-between bg-red-500/5 border border-red-500/20 rounded-sm px-4 py-3"
+              >
+                <div className="flex items-center gap-3">
+                  <Lock size={14} className="text-red-400" />
+                  <div>
+                    <span className="text-white font-medium text-sm">{formatDate(item.reservation_date)}</span>
+                    <span className="text-red-400/60 text-xs ml-3">Cerrado • Sin reservas online</span>
+                  </div>
+                </div>
+                <button
+                  onClick={() => removeClosedDate(item.reservation_date)}
+                  className="p-2 text-white/30 hover:text-red-400 hover:bg-red-500/10 rounded-sm transition-all"
+                  title="Desbloquear fecha"
+                >
+                  <Trash2 size={14} />
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
 
       {/* ─── SECCIÓN: MONITOR DE BASE DE DATOS ─── */}
       <section className="bg-[#111111] border border-white/10 rounded-sm p-8">
@@ -163,7 +317,7 @@ export default function AdminSettingsPage() {
                 </div>
                 <div className="text-white/40 text-xs">
                   <p>
-                    Muestra la saturación de hoy generada por los clientes interactuando con la carta (visitas y clics en platos). 
+                    Muestra la saturación de hoy generada por los clientes interactuando con la carta (visitas y clics en platos).
                     Si este número es muy alto (&gt;1000), puede causar problemas de recursos en Supabase.
                   </p>
                 </div>
